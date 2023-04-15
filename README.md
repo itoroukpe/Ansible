@@ -55,18 +55,16 @@ Ansible's architecture is designed to be simple, flexible, and extensible, makin
 - ## Ansible installation
 Here are the general steps to install Ansible on a Control Node running Linux:
 
-Update the package manager: First, update the package manager on the Control Node to ensure that you have the latest version of the package list. This can be done with the following command:
-
+- Update the package manager: First, update the package manager on the Control Node to ensure that you have the latest version of the package list. This can be done with the following command:
 sudo apt update
-Install Ansible: Once the package list is up-to-date, you can install Ansible with the following command:
 
-sudo apt install ansible
-This will install Ansible and any necessary dependencies.
+- Install Ansible: Once the package list is up-to-date, you can install Ansible with the following command:
+- sudo apt install ansible
+- This will install Ansible and any necessary dependencies.
 
-Verify the installation: After the installation is complete, you can verify that Ansible is installed by running the following command:
-
-ansible --version
-This should display the version of Ansible that was installed.
+- Verify the installation: After the installation is complete, you can verify that Ansible is installed by running the following command:
+- ansible --version
+- This should display the version of Ansible that was installed.
 
 That's it! Once Ansible is installed on the Control Node, you can begin managing your infrastructure by creating an inventory file, writing Playbooks, and executing tasks on Managed Nodes.
 
