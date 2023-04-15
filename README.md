@@ -7,11 +7,11 @@ Ansible uses an agentless architecture, which means that it does not require any
 
 With Ansible, you can automate the following tasks:
 
-Configuration management: You can use Ansible to define and enforce the desired state of your infrastructure, including servers, network devices, and other resources.
+- Configuration management: You can use Ansible to define and enforce the desired state of your infrastructure, including servers, network devices, and other resources.
 
-Application deployment: You can use Ansible to automate the deployment of applications, including web servers, databases, and other middleware components.
+- Application deployment: You can use Ansible to automate the deployment of applications, including web servers, databases, and other middleware components.
 
-Task automation: You can use Ansible to automate repetitive tasks, such as system updates, backups, and monitoring.
+- Task automation: You can use Ansible to automate repetitive tasks, such as system updates, backups, and monitoring.
 
 Ansible provides a wide range of modules that can be used to manage various systems and services, including Linux, Windows, cloud platforms, and network devices. Additionally, Ansible is highly extensible, allowing you to write your own modules and plugins to integrate with other tools and services.
 
@@ -19,36 +19,36 @@ Overall, Ansible provides a simple and powerful way to automate your IT infrastr
 - ## Why use Ansible
 There are several reasons why you may want to use Ansible for IT automation and configuration management:
 
-Simplicity: Ansible is easy to learn and use. It uses a simple, human-readable syntax based on YAML, which makes it easy to write, read, and understand. Additionally, Ansible uses a declarative approach, which means that you define the desired state of your infrastructure, and Ansible takes care of the details to make that state a reality.
+- Simplicity: Ansible is easy to learn and use. It uses a simple, human-readable syntax based on YAML, which makes it easy to write, read, and understand. Additionally, Ansible uses a declarative approach, which means that you define the desired state of your infrastructure, and Ansible takes care of the details to make that state a reality.
 
-Agentless architecture: Ansible uses an agentless architecture, which means that it does not require any software to be installed on the managed nodes. This makes it easy to deploy and use, and reduces the overhead associated with traditional agent-based approaches.
+- Agentless architecture: Ansible uses an agentless architecture, which means that it does not require any software to be installed on the managed nodes. This makes it easy to deploy and use, and reduces the overhead associated with traditional agent-based approaches.
 
-Scalability: Ansible can easily manage hundreds or thousands of nodes at once, making it suitable for large-scale deployments. Ansible's parallel execution capabilities allow it to run tasks on multiple nodes simultaneously, which reduces the overall execution time.
+- Scalability: Ansible can easily manage hundreds or thousands of nodes at once, making it suitable for large-scale deployments. Ansible's parallel execution capabilities allow it to run tasks on multiple nodes simultaneously, which reduces the overall execution time.
 
-Extensibility: Ansible provides a wide range of modules that can be used to manage various systems and services, including Linux, Windows, cloud platforms, and network devices. Additionally, Ansible is highly extensible, allowing you to write your own modules and plugins to integrate with other tools and services.
+- Extensibility: Ansible provides a wide range of modules that can be used to manage various systems and services, including Linux, Windows, cloud platforms, and network devices. Additionally, Ansible is highly extensible, allowing you to write your own modules and plugins to integrate with other tools and services.
 
-Reusability: Ansible's modular design makes it easy to reuse code across different playbooks and projects. This can save time and effort by reducing the need to write code from scratch for every new project.
+- Reusability: Ansible's modular design makes it easy to reuse code across different playbooks and projects. This can save time and effort by reducing the need to write code from scratch for every new project.
 
-Compliance and Security: Ansible can help you ensure compliance with industry standards and security policies. Ansible's auditing and reporting capabilities allow you to monitor and track changes to your infrastructure, and its integration with tools such as Ansible Vault allows you to securely manage sensitive data and credentials.
+- Compliance and Security: Ansible can help you ensure compliance with industry standards and security policies. Ansible's auditing and reporting capabilities allow you to monitor and track changes to your infrastructure, and its integration with tools such as Ansible Vault allows you to securely manage sensitive data and credentials.
 
 Overall, Ansible can help you automate IT processes, increase efficiency, reduce errors, and improve security and compliance. It is a powerful tool that can simplify IT management and help you achieve greater agility and scalability.
 
 - ## Ansible architecture
 Ansible follows a simple architecture that consists of the following components:
 
-Control Node: This is the machine where Ansible is installed and executed. The Control Node manages the automation tasks and communicates with the managed nodes.
+- Control Node: This is the machine where Ansible is installed and executed. The Control Node manages the automation tasks and communicates with the managed nodes.
 
-Managed Nodes: These are the machines that are managed and configured by Ansible. The Managed Nodes can be servers, workstations, network devices, or any other type of machine that can be managed remotely.
+- Managed Nodes: These are the machines that are managed and configured by Ansible. The Managed Nodes can be servers, workstations, network devices, or any other type of machine that can be managed remotely.
 
-Inventory: This is a list of Managed Nodes that Ansible will manage. The Inventory is defined in a simple text file that contains a list of Managed Nodes and their connection details.
+- Inventory: This is a list of Managed Nodes that Ansible will manage. The Inventory is defined in a simple text file that contains a list of Managed Nodes and their connection details.
 
-Modules: These are small units of code that are executed on Managed Nodes to perform specific tasks. Ansible provides a wide range of built-in modules that can be used to manage various systems and services, including Linux, Windows, cloud platforms, and network devices. Additionally, Ansible is highly extensible, allowing you to write your own modules and plugins to integrate with other tools and services.
+- Modules: These are small units of code that are executed on Managed Nodes to perform specific tasks. Ansible provides a wide range of built-in modules that can be used to manage various systems and services, including Linux, Windows, cloud platforms, and network devices. Additionally, Ansible is highly extensible, allowing you to write your own modules and plugins to integrate with other tools and services.
 
-Playbooks: These are YAML files that define the automation tasks to be executed on Managed Nodes. Playbooks contain a series of tasks, each of which is associated with a specific module. Playbooks define the desired state of the infrastructure, and Ansible takes care of the details to make that state a reality.
+- Playbooks: These are YAML files that define the automation tasks to be executed on Managed Nodes. Playbooks contain a series of tasks, each of which is associated with a specific module. Playbooks define the desired state of the infrastructure, and Ansible takes care of the details to make that state a reality.
 
-Roles: These are collections of Playbooks, modules, and files that can be easily shared and reused across different projects. Roles provide a modular and reusable way to organize Playbooks and manage complex infrastructures.
+- Roles: These are collections of Playbooks, modules, and files that can be easily shared and reused across different projects. Roles provide a modular and reusable way to organize Playbooks and manage complex infrastructures.
 
-Variables: These are values that are used by Ansible to configure Managed Nodes. Variables can be defined at various levels, including inventory, Playbooks, roles, and tasks. Variables can be used to customize the behavior of Ansible and provide greater flexibility and control over the automation tasks.
+- Variables: These are values that are used by Ansible to configure Managed Nodes. Variables can be defined at various levels, including inventory, Playbooks, roles, and tasks. Variables can be used to customize the behavior of Ansible and provide greater flexibility and control over the automation tasks.
 
 Ansible's architecture is designed to be simple, flexible, and extensible, making it easy to automate IT processes and manage complex infrastructures. Ansible's agentless approach and modular design make it a popular choice for configuration management, application deployment, and task automation.
 
@@ -75,15 +75,17 @@ The inventory file is typically a simple text file that can be edited manually o
 
 Here is an example of an inventory file that contains two groups of Managed Nodes:
 
+```
 [webservers]
 webserver1.example.com
 webserver2.example.com
 webserver3.example.com
-
+```
+```
 [dbservers]
 dbserver1.example.com
 dbserver2.example.com
-
+```
 In this example, there are two groups defined: "webservers" and "dbservers". The "webservers" group contains three Managed Nodes with hostnames "webserver1.example.com", "webserver2.example.com", and "webserver3.example.com". The "dbservers" group contains two Managed Nodes with hostnames "dbserver1.example.com" and "dbserver2.example.com".
 
 In addition to defining groups and Managed Nodes, the inventory file can also contain variables that are associated with specific groups or Managed Nodes. These variables can be used to customize the behavior of Ansible and provide greater flexibility and control over the automation tasks.
