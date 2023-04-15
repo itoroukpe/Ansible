@@ -1,15 +1,15 @@
-### Ansible
-### Introduction to Ansible
-What is Ansible
-Why use Ansible
-Ansible architecture
-Ansible installation
-Ansible inventory
-Ansible ad-hoc commands
+# Ansible
+# Introduction to Ansible
+- ## What is Ansible
+- ## Why use Ansible
+- ## Ansible architecture
+- ## Ansible installation
+- ## Ansible inventory
+- ## Ansible ad-hoc commands
 
-## Ansible Playbooks
-Introduction to playbooks
-YAML syntax
+# Ansible Playbooks
+- Introduction to playbooks
+- YAML syntax
 Modules and plugins
 Variables and facts
 Conditionals and loops
