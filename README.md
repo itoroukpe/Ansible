@@ -8,37 +8,37 @@
 - ## Ansible ad-hoc commands
 
 # Ansible Playbooks
-- Introduction to playbooks
-- YAML syntax
-Modules and plugins
-Variables and facts
-Conditionals and loops
-Error handling
-Tags
+- ## Introduction to playbooks
+- ## YAML syntax
+- ## Modules and plugins
+- ## Variables and facts
+- ## Conditionals and loops
+- ## Error handling
+- ## Tags
 
-## Advanced Ansible
-Roles
-Ansible vault
-Ansible Galaxy
-Ansible Tower
-Ansible testing and debugging
+# Advanced Ansible
+- ## Roles
+- ## Ansible vault
+- ## Ansible Galaxy
+- ## Ansible Tower
+- ## Ansible testing and debugging
 
 ## Ansible Best Practices
-Infrastructure as code principles
-Idempotency and declarative syntax
-Security best practices
-Scalability and performance
+- ## Infrastructure as code principles
+- ## Idempotency and declarative syntax
+- ## Security best practices
+- ## Scalability and performance
 
 ## Ansible Use Cases
-Configuration management
-Provisioning
-Orchestration
-Application deployment
-Continuous integration and delivery
+- ## Configuration management
+- ## Provisioning
+- ## Orchestration
+- ## Application deployment
+- ## Continuous integration and delivery
 
 ##Ansible Project
-Building a sample Ansible project from scratch
-Deploying a sample application using Ansible
+- ## Building a sample Ansible project from scratch
+- ## Deploying a sample application using Ansible
 
 The course can be divided into 10-12 sessions, each covering one or two topics. Each session can be designed to include a mix of lectures, hands-on exercises, and discussions to ensure that the students are engaged and understand the concepts thoroughly.
 
