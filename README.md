@@ -59,11 +59,15 @@ Here are the general steps to install Ansible on a Control Node running Linux:
 sudo apt update
 
 - Install Ansible: Once the package list is up-to-date, you can install Ansible with the following command:
-- sudo apt install ansible
+```
+sudo apt install ansible
+```
 - This will install Ansible and any necessary dependencies.
 
 - Verify the installation: After the installation is complete, you can verify that Ansible is installed by running the following command:
-- ansible --version
+```
+ansible --version
+```
 - This should display the version of Ansible that was installed.
 
 That's it! Once Ansible is installed on the Control Node, you can begin managing your infrastructure by creating an inventory file, writing Playbooks, and executing tasks on Managed Nodes.
@@ -96,17 +100,21 @@ Overall, the inventory file is a critical component of Ansible's architecture, a
 In Ansible, ad-hoc commands are one-line commands that can be executed on Managed Nodes without the need for a Playbook. Ad-hoc commands are useful for quick tasks or for testing a module or a command on a single or a group of Managed Nodes.
 
 Here is the general syntax of an ad-hoc command:
-
+```
 ansible <managed_nodes> -m <module_name> -a <module_arguments>
+```
 Let's break down the syntax:
 
 ansible: This is the command to execute Ansible on the Control Node.
+```
 <managed_nodes>: This is the list of Managed Nodes that the ad-hoc command will be executed on. This can be a single hostname, an IP address, or a group of Managed Nodes defined in the inventory file.
 -m <module_name>: This is the module name that the ad-hoc command will use to perform the task on the Managed Nodes.
 -a <module_arguments>: This is the argument or arguments that the module requires to perform the task.
+```
 Here is an example of an ad-hoc command that uses the "ping" module to test the connectivity to a Managed Node:
-
+```
 ansible webservers -m ping
+```
 In this example, the ad-hoc command will execute the "ping" module on all Managed Nodes in the "webservers" group defined in the inventory file. The "ping" module will test the connectivity to the Managed Nodes and return the result.
 
 Ad-hoc commands can be very useful for simple tasks, such as testing connectivity, executing a command, or copying a file, without the need for a full Playbook. However, for complex tasks and automation workflows, Playbooks are the preferred approach.
@@ -120,7 +128,7 @@ A Playbook is essentially a collection of Plays. A Play is a set of tasks that a
 Here is an example of a simple Playbook:
 
 yaml
-
+```
 ---
 - name: Install Apache on webservers
   hosts: webservers
@@ -136,7 +144,7 @@ yaml
     service:
       name: apache2
       state: started
-      
+```      
 In this example, the Playbook contains one Play that defines two tasks. The Play is named "Install Apache on webservers" and will be executed on all Managed Nodes in the "webservers" group defined in the inventory file. The become keyword is used to elevate privileges to perform actions that require root access.
 
 The first task installs the Apache package using the apt module, and the second task starts the Apache service using the service module.
@@ -150,21 +158,21 @@ YAML (short for "YAML Ain't Markup Language") is a human-readable data serializa
 
 Indentation: YAML uses indentation (spaces or tabs) to define the structure of data. Indentation is used to create parent-child relationships between elements. Typically, two spaces or a tab are used for each level of indentation.
 Example:
-
-yaml
-Copy code
+```
 # Correct indentation
 key1:
   key2:
     key3: value
-
+```
+```
 # Incorrect indentation
 key1:
  key2:
    key3: value
+```
 Key-value pairs: YAML uses key-value pairs to represent data. Keys are followed by a colon (:) and values can be scalar values (strings, numbers, booleans), lists, or dictionaries (nested key-value pairs).
 Example:
-
+```
 key1: value1
 key2: value2
 key3:
@@ -174,12 +182,14 @@ key3:
 key4:
   subkey1: subvalue1
   subkey2: subvalue2
+```
 Lists: Lists are represented using a hyphen (-) followed by a space, and items in the list are indented.
 Example:
-
+```
 - item1
 - item2
 - item3
+```
 Comments: Comments in YAML start with the hash symbol (#) and can be used to add explanations or annotations to the configuration file.
 Example:
 
@@ -188,14 +198,16 @@ Example:
 key1: value1  # This is a comment after a key-value pair
 Quoted strings: Strings in YAML can be quoted using single quotes (' ') or double quotes (" "). Quoted strings can contain special characters or spaces without being interpreted as YAML syntax.
 Example:
-
+```
 key1: 'value with spaces'
 key2: "value with special characters: !@#$%^&*()"
 Anchors and aliases: YAML allows you to define anchors (using &) and aliases (using *) to reuse values or references across the configuration file.
+```
 Example:
-
+```
 key1: &anchor1 value1
 key2: *anchor1
+```
 These are some of the basic syntax rules for YAML. It's important to follow these rules when writing Ansible Playbooks or other YAML configuration files to ensure proper parsing and execution by the Ansible engine.
 
 - ## Modules and plugins
