@@ -1,7 +1,16 @@
 # Ansible
 1. [What is Ansible?](https://github.com/itoroukpe/Ansible/blob/main/README.md#what-is-ansible)
-2. [Why Ansible?](  )
-3. [Ansible Architecture] ( )
+2. [Why Ansible?](https://github.com/itoroukpe/Ansible/blob/main/README.md#why-use-ansible  )
+3. [Ansible Architecture](https://github.com/itoroukpe/Ansible/blob/main/README.md#ansible-architecture )
+4. [Ansible Installation](https://github.com/itoroukpe/Ansible/blob/main/README.md#ansible-installation)
+5. [Ansible Inventory](https://github.com/itoroukpe/Ansible/blob/main/README.md#ansible-inventory)
+6. [Ansible ad-hoc commands](https://github.com/itoroukpe/Ansible/blob/main/README.md#ansible-ad-hoc-commands)
+7. [Ansible Playbooks](https://github.com/itoroukpe/Ansible/blob/main/README.md#ansible-playbook)
+8. [Advanced Ansible](https://github.com/itoroukpe/Ansible/blob/main/README.md#advanced-ansible)
+9. [Ansible Best Practices](https://github.com/itoroukpe/Ansible/blob/main/README.md#ansible-best-practices)
+10. [Ansible Use Cases](https://github.com/itoroukpe/Ansible/blob/main/README.md#ansible-use-cases)
+
+
 # Introduction to Ansible
 - ## What is Ansible
 Ansible is an open-source automation tool that simplifies IT configuration management, application deployment, and task automation. It was developed by Michael DeHaan in 2012 and later acquired by Red Hat in 2015. Ansible is based on a declarative language that allows you to define the desired state of your infrastructure and automate the processes needed to achieve that state.
@@ -161,13 +170,13 @@ YAML (short for "YAML Ain't Markup Language") is a human-readable data serializa
 Indentation: YAML uses indentation (spaces or tabs) to define the structure of data. Indentation is used to create parent-child relationships between elements. Typically, two spaces or a tab are used for each level of indentation.
 Example:
 ```
-# Correct indentation
+Correct indentation
 key1:
   key2:
     key3: value
 ```
 ```
-# Incorrect indentation
+Incorrect indentation
 key1:
  key2:
    key3: value
