@@ -5,7 +5,7 @@
 4. [Ansible Installation](https://github.com/itoroukpe/Ansible/blob/main/README.md#ansible-installation)
 5. [Ansible Inventory](https://github.com/itoroukpe/Ansible/blob/main/README.md#ansible-inventory)
 6. [Ansible ad-hoc commands](https://github.com/itoroukpe/Ansible/blob/main/README.md#ansible-ad-hoc-commands)
-7. [Ansible Playbooks](https://github.com/itoroukpe/Ansible/blob/main/README.md#ansible-playbook)
+7. [Ansible Playbooks](https://github.com/itoroukpe/Ansible/blob/main/README.md#ansible-playbooks)
 8. [Advanced Ansible](https://github.com/itoroukpe/Ansible/blob/main/README.md#advanced-ansible)
 9. [Ansible Best Practices](https://github.com/itoroukpe/Ansible/blob/main/README.md#ansible-best-practices)
 10. [Ansible Use Cases](https://github.com/itoroukpe/Ansible/blob/main/README.md#ansible-use-cases)
