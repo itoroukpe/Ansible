@@ -1,4 +1,7 @@
 # Ansible
+1. [What is Ansible?](https://github.com/itoroukpe/Ansible/blob/main/README.md#what-is-ansible)
+2. [Why Ansible?](  )
+3. [Ansible Architecture] ( )
 # Introduction to Ansible
 - ## What is Ansible
 Ansible is an open-source automation tool that simplifies IT configuration management, application deployment, and task automation. It was developed by Michael DeHaan in 2012 and later acquired by Red Hat in 2015. Ansible is based on a declarative language that allows you to define the desired state of your infrastructure and automate the processes needed to achieve that state.
