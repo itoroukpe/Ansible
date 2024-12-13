@@ -46,7 +46,31 @@ By the end of this workshop, participants will:
 
      [db]
      192.168.1.20
-     ```
+
+   ```
+   ---
+**Create an Ansible Inventory**
+```
+ vi /etc/ansible/hosts
+ sudo chown -R ansible:ansible /etc/ansible
+
+ by default:
+  ansible communicate using ssh keys and ansible user  
+
+vi /tmp/k8.pem   #(copy your remote keypair and paste)
+```
+---
+```
+ [webserver]
+ 52.38.24.142 ansible_user=ubuntu ansible_ssh_private_key_file=/tmp/classkey.pem
+ [appserver]
+ 35.89.85.124  ansible_user=ubuntu ansible_ssh_private_key_file=/tmp/classkey.pem 
+ [dbservers]
+  172.31.7.161 ansible_user=ec2-user ansible_ssh_private_key_file=/tmp/ classkey.pem 
+ [webservers]
+ 172.31.9.118 ansible_user=ec2-user ansible_ssh_private_key_file=/tmp/ classkey.pem 
+
+```
 
 4. **Test Connectivity**:
    Use the `ping` module to verify connection:
