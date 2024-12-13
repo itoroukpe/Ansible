@@ -183,34 +183,38 @@ Ansible playbooks are YAML files that define a series of tasks to be executed on
 
 #### **8. Playbook to Install Jenkins, Maven, SonarQube, Nexus, Docker**
 - File: `install_tools.yml`
-```yaml
+```bash
 - name: Install Jenkins, Maven, SonarQube, Nexus, and Docker
   hosts: all
   become: true
   tasks:
+    - name: Update APT cache
+      ansible.builtin.apt:
+        update_cache: yes
+
     - name: Install Jenkins
-      ansible.builtin.yum:
+      ansible.builtin.apt:
         name: jenkins
         state: present
 
     - name: Install Maven
-      ansible.builtin.yum:
+      ansible.builtin.apt:
         name: maven
         state: present
 
     - name: Install SonarQube
-      ansible.builtin.yum:
+      ansible.builtin.apt:
         name: sonarqube
         state: present
 
     - name: Install Nexus
-      ansible.builtin.yum:
+      ansible.builtin.apt:
         name: nexus
         state: present
 
     - name: Install Docker
-      ansible.builtin.yum:
-        name: docker
+      ansible.builtin.apt:
+        name: docker.io
         state: present
 
     - name: Start Docker
@@ -219,12 +223,6 @@ Ansible playbooks are YAML files that define a series of tasks to be executed on
         state: started
         enabled: true
 ```
-- Run the playbook:
-  ```bash
-  ansible-playbook install_tools.yml
-  ```
-
----
 
 #### **9. Playbook to Install a Kubernetes Cluster**
 - File: `install_k8s.yml`
