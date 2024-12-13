@@ -163,7 +163,7 @@ Ansible modules are reusable, standalone scripts for specific tasks.
 4. **Using the `debug` Module**:
    - Output a message:
      ```bash
-     ansible all -i inventory -m debug -a "msg='Hello from Ansible!'"
+     ansible all -i inventory -m debug -a "msg='Hello from Ansible\!'"
      ```
 
 ---
