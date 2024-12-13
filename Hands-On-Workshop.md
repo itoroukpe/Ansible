@@ -185,6 +185,7 @@ Ansible playbooks are YAML files that define a series of tasks to be executed on
 - File: `install_tools.yml`
 ```bash
 
+---
 - name: Install Jenkins, Maven, SonarQube, Nexus, and Docker
   hosts: all
   become: true
@@ -193,14 +194,15 @@ Ansible playbooks are YAML files that define a series of tasks to be executed on
       ansible.builtin.apt:
         update_cache: yes
 
-    - name: Add Jenkins GPG key
-      ansible.builtin.apt_key:
-        url: https://pkg.jenkins.io/debian/jenkins.io.key
-        state: present
+    - name: Add Jenkins GPG key to keyrings
+      ansible.builtin.shell: |
+        curl -fsSL https://pkg.jenkins.io/debian/jenkins.io.key | gpg --dearmor -o /usr/share/keyrings/jenkins-keyring.gpg
+      args:
+        creates: /usr/share/keyrings/jenkins-keyring.gpg
 
     - name: Add Jenkins repository
       ansible.builtin.apt_repository:
-        repo: "deb https://pkg.jenkins.io/debian binary/"
+        repo: "deb [signed-by=/usr/share/keyrings/jenkins-keyring.gpg] https://pkg.jenkins.io/debian binary/"
         state: present
 
     - name: Update APT cache after adding Jenkins repository
