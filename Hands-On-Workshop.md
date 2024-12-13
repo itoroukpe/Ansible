@@ -184,11 +184,26 @@ Ansible playbooks are YAML files that define a series of tasks to be executed on
 #### **8. Playbook to Install Jenkins, Maven, SonarQube, Nexus, Docker**
 - File: `install_tools.yml`
 ```bash
+
 - name: Install Jenkins, Maven, SonarQube, Nexus, and Docker
   hosts: all
   become: true
   tasks:
     - name: Update APT cache
+      ansible.builtin.apt:
+        update_cache: yes
+
+    - name: Add Jenkins GPG key
+      ansible.builtin.apt_key:
+        url: https://pkg.jenkins.io/debian/jenkins.io.key
+        state: present
+
+    - name: Add Jenkins repository
+      ansible.builtin.apt_repository:
+        repo: "deb https://pkg.jenkins.io/debian binary/"
+        state: present
+
+    - name: Update APT cache after adding Jenkins repository
       ansible.builtin.apt:
         update_cache: yes
 
@@ -202,15 +217,17 @@ Ansible playbooks are YAML files that define a series of tasks to be executed on
         name: maven
         state: present
 
-    - name: Install SonarQube
-      ansible.builtin.apt:
-        name: sonarqube
-        state: present
+    - name: Add SonarQube repository and install SonarQube
+      ansible.builtin.shell: |
+        wget -qO - https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-latest.zip -P /opt
+      args:
+        creates: /opt/sonarqube-latest.zip
 
-    - name: Install Nexus
-      ansible.builtin.apt:
-        name: nexus
-        state: present
+    - name: Add Nexus repository and install Nexus
+      ansible.builtin.shell: |
+        wget -qO - https://download.sonatype.com/nexus/3/nexus-3-latest-unix.tar.gz -P /opt
+      args:
+        creates: /opt/nexus-3-latest-unix.tar.gz
 
     - name: Install Docker
       ansible.builtin.apt:
@@ -222,6 +239,7 @@ Ansible playbooks are YAML files that define a series of tasks to be executed on
         name: docker
         state: started
         enabled: true
+
 ```
 
 #### **9. Playbook to Install a Kubernetes Cluster**
