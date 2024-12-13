@@ -24,7 +24,7 @@ By the end of this workshop, participants will:
 1. **Install Ansible on the Control Node**:
    - On Linux:
    - Installing Ansible on Ubuntu
-     ```bash
+```bash
 sudo apt update
 sudo hostname ansible
 sudo adduser ansible
