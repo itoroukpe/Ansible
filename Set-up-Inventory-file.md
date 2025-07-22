@@ -50,8 +50,7 @@ Here’s a cleaned-up inventory format:
 [dbservers]
 172.31.7.161 ansible_user=ec2-user ansible_ssh_private_key_file=/tmp/classkey.pem
 
-[webservers]
-172.31.9.118 ansible_user=ec2-user ansible_ssh_private_key_file=/tmp/classkey.pem
+
 ```
 
 > ✅ **Note**:
